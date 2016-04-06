@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -66,6 +67,16 @@ body {
   text-transform: uppercase;
   min-width: 960px;
   background: #000 url("../img/bg.png") no-repeat center top;
+  color: #fff;
+}
+
+/*╨б╤В╨╕╨╗╤М ╨┤╨╗╤П ╨▓╨╜╤Г╤В╤А╨╡╨╜╨╜╨╡╨╣ ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л ╨┐╤А╨░╨╣╤Б╨░*/
+.inner-page {
+  color: #000;
+  background: #f8f3f0 url("../img/bg-inner/png") repeat;
+}
+.inner-page .main-header {
+  margin-bottom: 55px;
 }
 
 .clearfix::after {
@@ -93,6 +104,7 @@ body {
 .main-navigation {
   float: left;
   width: 780px;
+  /*╨Ы╨╛╨│╨╛╤В╨╕╨┐ ╨▓╨╛ ╨▓╨╜╤Г╤В╤А╨╡╨╜╨╜╨╕╤Е ╤Б╤В╤А╨░╨╜╨╕╤Ж╨░╤Е*/
 }
 .main-navigation ul {
   font-size: 0;
@@ -110,6 +122,39 @@ body {
 }
 .main-navigation a:hover {
   background: #242424;
+}
+.main-navigation .logo-inner {
+  float: left;
+  width: 111px;
+  height: 20px;
+  padding-top: 22px;
+}
+.main-navigation .logo-inner img {
+  width: 111px;
+  height: 24px;
+}
+.main-navigation .logo-inner:hover {
+  background: none;
+}
+.main-navigation .active {
+  position: relative;
+  background-color: none;
+}
+.main-navigation .active span {
+  display: block;
+  padding: 25px 20px;
+}
+.main-navigation .active a:hover {
+  background: none;
+}
+.main-navigation .active::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  height: 5px;
+  background-color: #FFF;
 }
 
 .user-block {
@@ -386,4 +431,49 @@ body {
 }
 .main-footer .footer-copyright .btn {
   margin-right: 0;
+}
+
+/*╨б╤В╨╕╨╗╨╕ ╨▓╨╜╤Г╤В╤А╨╡╨╜╨╜╨╕╤Е ╤Б╤В╤А╨░╨╜╨╕╤Ж*/
+.inner-page-title {
+  margin-bottom: 55px;
+}
+.inner-page-title h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 42px;
+}
+.inner-page-title .breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.inner-page-title .breadcrumbs li {
+  position: relative;
+  display: inline;
+  padding-right: 40px;
+}
+.inner-page-title .breadcrumbs a {
+  color: #000;
+  text-decoration: none;
+}
+.inner-page-title .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.inner-page-title .breadcrumbs .current {
+  color: #aba9a7;
+}
+.inner-page-title .breadcrumbs .current::after {
+  display: none;
+}
+.inner-page-title li::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  transform: rotate(45deg);
 }

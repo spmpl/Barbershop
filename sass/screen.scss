@@ -20,6 +20,17 @@ font-family: "PT Sans Narrow", "Arial", sans-serif;
 text-transform: uppercase;
 min-width: 960px;
 background: #000 url("../img/bg.png") no-repeat center top;
+color: #fff;
+}
+/*Стиль для внутренней страницы прайса*/
+.inner-page{
+	color: #000;
+
+	background: #f8f3f0 url("../img/bg-inner/png") repeat;
+
+	.main-header{
+		margin-bottom: 55px;
+	}
 }
 
 .clearfix::after{
@@ -43,6 +54,7 @@ background: #000 url("../img/bg.png") no-repeat center top;
 		color: #fff;
 		text-decoration: none;
 	}
+
 }
 
 .main-navigation{
@@ -69,6 +81,49 @@ background: #000 url("../img/bg.png") no-repeat center top;
      a:hover{
      	background: #242424;
      }
+/*Логотип во внутренних страницах*/     
+     .logo-inner{
+     	float: left;
+     	width: 111px;
+     	height: 20px;
+     	padding-top: 22px;
+
+     	img{
+     		width: 111px;
+     		height: 24px;
+     	}
+     }
+
+     .logo-inner:hover{
+          background: none;
+     	}
+
+     .active{
+     	position: relative;
+  
+     	background-color: none;
+
+     	span{
+     		display: block;
+     		padding: 25px 20px;
+     	}
+     }
+     .active a:hover {
+        background: none; 
+     }
+
+     .active::after{
+     	content: "";
+     	position: absolute;
+     	right: 20px;
+     	bottom: 0;
+     	left: 20px;
+
+     	height: 5px;
+
+     	background-color: #FFF;
+     }
+
 }
 
 .user-block{
@@ -405,4 +460,60 @@ text-align: center;
     	 	margin-right: 0;
     	 }
     }
+}
+/*Стили внутренних страниц*/
+.inner-page-title{
+	margin-bottom: 55px;
+
+	h1{
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0;
+
+		font-size: 30px;
+		line-height: 42px;
+	}
+
+	.breadcrumbs{
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+
+		li{
+			position: relative;
+
+			display: inline;
+			padding-right: 40px;
+		}
+
+		a{
+			color: #000;
+			text-decoration: none;
+		}
+
+		a:hover{
+			text-decoration: underline;
+		}
+
+		.current{
+			color: #aba9a7;
+		}
+		.current::after{
+			display: none;
+		}
+	}
+
+	li::after{
+       content:"";
+       position: absolute;
+       top: 5px;
+       right: 16px;
+
+       width: 8px;
+       height: 8px;
+
+       background-color: #000;
+       transform: rotate(45deg);
+	}
 }
